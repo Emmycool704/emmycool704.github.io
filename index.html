@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Emmanuel Strategist | Ecommerce Growth Experts</title>
     <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,6 +21,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
     }
 
     body {
@@ -29,6 +30,7 @@
         background-color: var(--light);
         overflow-x: hidden;
         line-height: 1.6;
+        text-size-adjust: 100%;
     }
 
     /* Header Styles */
@@ -46,7 +48,7 @@
     }
 
     .logo {
-        font-size: 1.8rem;
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
         font-weight: 700;
         color: var(--primary);
         display: flex;
@@ -72,6 +74,7 @@
         font-weight: 500;
         transition: var(--transition);
         position: relative;
+        font-size: clamp(0.9rem, 1.5vw, 1rem);
     }
 
     .nav-links a:hover {
@@ -96,6 +99,8 @@
     .hamburger {
         display: none;
         cursor: pointer;
+        padding: 10px;
+        margin-right: -10px;
     }
 
     .hamburger div {
@@ -109,6 +114,7 @@
     /* Hero Section */
     .hero {
         min-height: 100vh;
+        min-height: 100dvh;
         background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
         display: flex;
         align-items: center;
@@ -141,12 +147,15 @@
         display: inline-block;
         background-color: var(--primary);
         color: white;
-        padding: 0.8rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 50px;
         text-decoration: none;
         font-weight: 600;
         transition: var(--transition);
         box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        min-width: 200px;
+        text-align: center;
     }
 
     .cta-button:hover {
@@ -215,18 +224,19 @@
     }
 
     .service-icon {
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 5vw, 3rem);
         color: var(--primary);
         margin-bottom: 1.5rem;
     }
 
     .service-card h3 {
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
         margin-bottom: 1rem;
     }
 
     .service-card p {
         color: #666;
+        font-size: clamp(0.9rem, 2vw, 1rem);
     }
 
     /* Testimonials */
@@ -298,7 +308,7 @@
     }
 
     .footer-column h3 {
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
         margin-bottom: 1.5rem;
         color: var(--primary);
     }
@@ -306,7 +316,7 @@
     .footer-column p {
         margin-bottom: 1rem;
         color: #bbb;
-        font-size: 0.9rem;
+        font-size: clamp(0.85rem, 2vw, 0.9rem);
     }
 
     .social-links {
@@ -336,7 +346,7 @@
         padding-top: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         color: #bbb;
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
     }
 
     /* Process Section */
@@ -464,12 +474,14 @@
         margin-bottom: 1rem;
         display: flex;
         align-items: flex-start;
+        font-size: clamp(0.9rem, 2vw, 1rem);
     }
 
     .dev-features i {
         color: var(--primary);
         margin-right: 0.5rem;
         margin-top: 0.2rem;
+        flex-shrink: 0;
     }
 
     .tech-stack {
@@ -484,7 +496,7 @@
     }
 
     .tech-icons i {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 4vw, 2rem);
         color: var(--dark);
         transition: var(--transition);
     }
@@ -521,6 +533,10 @@
         box-shadow: 0 15px 30px rgba(108, 99, 255, 0.1);
     }
 
+    .strategy h3 {
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
+    }
+
     .strategy h3 span {
         color: var(--primary);
         margin-right: 0.5rem;
@@ -535,6 +551,7 @@
         margin-bottom: 0.5rem;
         position: relative;
         padding-left: 1.5rem;
+        font-size: clamp(0.9rem, 2vw, 1rem);
     }
 
     .strategy li::before {
@@ -561,7 +578,7 @@
     }
 
     .result-card h4 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 4vw, 2rem);
         color: var(--primary);
         margin-bottom: 0.5rem;
     }
@@ -622,17 +639,21 @@
         gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 1.5rem;
     }
 
     .secondary-button {
         display: inline-block;
-        padding: 0.8rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 50px;
         border: 2px solid white;
         color: white;
         text-decoration: none;
         font-weight: 600;
         transition: var(--transition);
+        min-width: 200px;
+        text-align: center;
+        font-size: clamp(0.9rem, 2vw, 1rem);
     }
 
     .secondary-button:hover {
@@ -658,6 +679,12 @@
     }
 
     /* Responsive Adjustments */
+    @media (max-width: 1200px) {
+        .hero {
+            padding-top: 90px;
+        }
+    }
+
     @media (max-width: 992px) {
         .hero {
             flex-direction: column;
@@ -669,17 +696,22 @@
 
         .hero-content {
             margin-bottom: 3rem;
+            max-width: 100%;
+        }
+
+        .hero-image {
+            margin-top: 2rem;
         }
 
         .nav-links {
-            position: absolute;
+            position: fixed;
             right: 0;
-            top: 70px;
+            top: 80px;
             background-color: white;
             width: 100%;
             flex-direction: column;
             align-items: center;
-            padding: 1rem 0;
+            padding: 2rem 0;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             transform: translateY(-150%);
             transition: var(--transition);
@@ -735,7 +767,11 @@
 
         .secondary-button {
             width: 100%;
-            text-align: center;
+            max-width: 300px;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -755,6 +791,68 @@
         .footer-content {
             grid-template-columns: 1fr;
         }
+
+        .cta-button, .secondary-button {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    }
+
+    /* Desktop mode on mobile devices */
+    @media (min-width: 992px) and (max-height: 500px) {
+        .hero {
+            min-height: 120vh;
+        }
+    }
+
+    /* Reduced motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    /* Very small mobile devices */
+    @media (max-width: 400px) {
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+        }
+        
+        .service-card, .step, .strategy {
+            padding: 1.2rem;
+        }
+        
+        .case-image {
+            height: 200px;
+        }
+    }
+
+    /* Landscape mode adjustments */
+    @media (max-height: 500px) and (orientation: landscape) {
+        .hero {
+            padding-top: 70px;
+            min-height: 100vh;
+        }
+        
+        .nav-links {
+            top: 60px;
+        }
+        
+        .hero-content {
+            margin-bottom: 1rem;
+        }
+        
+        .hero-image {
+            margin-top: 1rem;
+        }
     }
 </style>
 </head>
@@ -764,7 +862,7 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/6896badf5bef75191d171968/1j26cjug1';
+s1.src='https://embed.tawk.to/6896c4356ec67e192b92439a/default';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
@@ -797,7 +895,7 @@ s0.parentNode.insertBefore(s1,s0);
             <a href="https://wa.me/447780697249" class="cta-button">Get Your Free Consultation</a>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ecommerce Success">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ecommerce Success" loading="lazy">
         </div>
     </section>
 
@@ -832,202 +930,181 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </section>
 
-
-
-
-<!-- Updated Hero Section -->
-<!-- <section class="hero">
-    <div class="hero-content">
-        <h1>Transform Your <span>Ecommerce</span> Business With Expert Strategies</h1>
-        <p>We specialize in complete ecommerce solutions - from stunning designs to high-performance development and result-driven marketing. Our holistic approach ensures your store not only looks amazing but converts visitors into loyal customers.</p>
-        <div class="hero-buttons">
-            <a href="https://wa.me/447780697249" class="cta-button">Get Your Free Consultation</a>
-            <a href="#process" class="secondary-button">Our Process <i class="fas fa-arrow-down"></i></a>
+    <!-- Our Process Section -->
+    <section class="process" id="process">
+        <div class="section-title">
+            <h2>Our Proven 4-Step Process</h2>
+            <p>We follow a strategic framework to ensure your ecommerce success</p>
         </div>
-    </div>
-</section> -->
-
-<!-- New: Our Process Section -->
-<section class="process" id="process">
-    <div class="section-title">
-        <h2>Our Proven 4-Step Process</h2>
-        <p>We follow a strategic framework to ensure your ecommerce success</p>
-    </div>
-    <div class="process-steps">
-        <div class="step">
-            <div class="step-number">1</div>
-            <h3>Discovery & Strategy</h3>
-            <p>We analyze your market, competitors and customers to create a winning roadmap</p>
-        </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <h3>Design & Development</h3>
-            <p>Your vision comes to life with stunning design and flawless functionality</p>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <h3>Launch & Optimize</h3>
-            <p>We meticulously test and refine every element before going live</p>
-        </div>
-        <div class="step">
-            <div class="step-number">4</div>
-            <h3>Scale & Market</h3>
-            <p>Data-driven marketing strategies to grow your business exponentially</p>
-        </div>
-    </div>
-</section>
-
-<!-- Expanded Ecommerce Design Section -->
-<section class="design-section">
-    <div class="section-title">
-        <h2>Ecommerce Design That Converts</h2>
-        <p>We create visually stunning stores designed to maximize conversions</p>
-    </div>
-    <div class="design-content">
-        <div class="design-features">
-            <div class="feature">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile-First Design</h3>
-                <p>With over 70% of traffic coming from mobile, we prioritize seamless mobile experiences that convert.</p>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Discovery & Strategy</h3>
+                <p>We analyze your market, competitors and customers to create a winning roadmap</p>
             </div>
-            <div class="feature">
-                <i class="fas fa-tachometer-alt"></i>
-                <h3>Conversion Optimization</h3>
-                <p>Every element is strategically placed to guide visitors toward purchase with proven UX principles.</p>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Design & Development</h3>
+                <p>Your vision comes to life with stunning design and flawless functionality</p>
             </div>
-            <div class="feature">
-                <i class="fas fa-palette"></i>
-                <h3>Brand-Centric Approach</h3>
-                <p>Your store reflects your unique brand identity while maintaining ecommerce best practices.</p>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Launch & Optimize</h3>
+                <p>We meticulously test and refine every element before going live</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Scale & Market</h3>
+                <p>Data-driven marketing strategies to grow your business exponentially</p>
             </div>
         </div>
-        <div class="design-image">
-            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df" alt="Ecommerce Design">
-        </div>
-    </div>
-    <div class="portfolio-cta">
-        <p>View our portfolio of high-converting designs</p>
-        <a href="https://wa.me/447780697249" class="cta-button">See Our Work</a>
-    </div>
-</section>
+    </section>
 
-<!-- Expanded Store Development Section -->
-<section class="development-section">
-    <div class="section-title">
-        <h2>High-Performance Store Development</h2>
-        <p>Technical excellence that drives results</p>
-    </div>
-    <div class="dev-content">
-        <div class="dev-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Ecommerce Development">
+    <!-- Ecommerce Design Section -->
+    <section class="design-section">
+        <div class="section-title">
+            <h2>Ecommerce Design That Converts</h2>
+            <p>We create visually stunning stores designed to maximize conversions</p>
         </div>
-        <div class="dev-features">
-            <h3>We Build Stores That:</h3>
-            <ul>
-                <li><i class="fas fa-check-circle"></i> Load in under 2 seconds (critical for conversions)</li>
-                <li><i class="fas fa-check-circle"></i> Integrate seamlessly with your business systems</li>
-                <li><i class="fas fa-check-circle"></i> Scale effortlessly during traffic spikes</li>
-                <li><i class="fas fa-check-circle"></i> Provide bulletproof security for you and your customers</li>
-                <li><i class="fas fa-check-circle"></i> Offer intuitive admin interfaces for easy management</li>
-            </ul>
-            <div class="tech-stack">
-                <h4>Our Technology Stack:</h4>
-                <div class="tech-icons">
-                    <i class="fab fa-shopify" title="Shopify"></i>
-                    <i class="fab fa-wordpress" title="WooCommerce"></i>
-                    <i class="fab fa-react" title="React"></i>
-                    <i class="fab fa-js" title="JavaScript"></i>
-                    <i class="fas fa-database" title="Custom Databases"></i>
+        <div class="design-content">
+            <div class="design-features">
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile-First Design</h3>
+                    <p>With over 70% of traffic coming from mobile, we prioritize seamless mobile experiences that convert.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>Conversion Optimization</h3>
+                    <p>Every element is strategically placed to guide visitors toward purchase with proven UX principles.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-palette"></i>
+                    <h3>Brand-Centric Approach</h3>
+                    <p>Your store reflects your unique brand identity while maintaining ecommerce best practices.</p>
+                </div>
+            </div>
+            <div class="design-image">
+                <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df" alt="Ecommerce Design" loading="lazy">
+            </div>
+        </div>
+        <div class="portfolio-cta">
+            <p>View our portfolio of high-converting designs</p>
+            <a href="https://wa.me/447780697249" class="cta-button">See Our Work</a>
+        </div>
+    </section>
+
+    <!-- Store Development Section -->
+    <section class="development-section">
+        <div class="section-title">
+            <h2>High-Performance Store Development</h2>
+            <p>Technical excellence that drives results</p>
+        </div>
+        <div class="dev-content">
+            <div class="dev-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Ecommerce Development" loading="lazy">
+            </div>
+            <div class="dev-features">
+                <h3>We Build Stores That:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Load in under 2 seconds (critical for conversions)</li>
+                    <li><i class="fas fa-check-circle"></i> Integrate seamlessly with your business systems</li>
+                    <li><i class="fas fa-check-circle"></i> Scale effortlessly during traffic spikes</li>
+                    <li><i class="fas fa-check-circle"></i> Provide bulletproof security for you and your customers</li>
+                    <li><i class="fas fa-check-circle"></i> Offer intuitive admin interfaces for easy management</li>
+                </ul>
+                <div class="tech-stack">
+                    <h4>Our Technology Stack:</h4>
+                    <div class="tech-icons">
+                        <i class="fab fa-shopify" title="Shopify"></i>
+                        <i class="fab fa-wordpress" title="WooCommerce"></i>
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fas fa-database" title="Custom Databases"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Expanded Growth Marketing Section -->
-<section class="marketing-section">
-    <div class="section-title">
-        <h2>Data-Driven Growth Marketing</h2>
-        <p>We don't just drive traffic - we drive profitable customers</p>
-    </div>
-    <div class="marketing-strategies">
-        <div class="strategy">
-            <h3><span>01</span> Paid Advertising</h3>
-            <p>Precision-targeted campaigns on Meta, Google, TikTok and more that maximize ROAS.</p>
-            <ul>
-                <li>Conversion-optimized ad creatives</li>
-                <li>Advanced audience segmentation</li>
-                <li>Automated bid strategies</li>
-            </ul>
+    <!-- Growth Marketing Section -->
+    <section class="marketing-section">
+        <div class="section-title">
+            <h2>Data-Driven Growth Marketing</h2>
+            <p>We don't just drive traffic - we drive profitable customers</p>
         </div>
-        <div class="strategy">
-            <h3><span>02</span> Email & SMS Marketing</h3>
-            <p>Automated sequences that turn one-time buyers into loyal customers.</p>
-            <ul>
-                <li>Abandoned cart recovery</li>
-                <li>Post-purchase nurture flows</li>
-                <li>Segmented promotional campaigns</li>
-            </ul>
-        </div>
-        <div class="strategy">
-            <h3><span>03</span> Organic Growth</h3>
-            <p>Sustainable strategies that build long-term brand authority.</p>
-            <ul>
-                <li>SEO-optimized content</li>
-                <li>Social media community building</li>
-                <li>Influencer partnerships</li>
-            </ul>
-        </div>
-    </div>
-    <div class="results-showcase">
-        <div class="result-card">
-            <h4>3-5X</h4>
-            <p>Average ROAS increase for our clients</p>
-        </div>
-        <div class="result-card">
-            <h4>40%+</h4>
-            <p>Improvement in customer acquisition costs</p>
-        </div>
-        <div class="result-card">
-            <h4>2-3X</h4>
-            <p>Higher customer lifetime value</p>
-        </div>
-    </div>
-</section>
-
-<!-- New: Case Studies Section -->
-<section class="case-studies">
-    <div class="section-title">
-        <h2>Success Stories</h2>
-        <p>Real businesses, real results</p>
-    </div>
-    <div class="case-study-grid">
-        <div class="case-study">
-            <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1526947425960-945c6e72858f')"></div>
-            <div class="case-content">
-                <h3>Fashion Boutique</h3>
-                <p class="results">+320% revenue in 6 months</p>
-                <p>Complete store redesign combined with targeted influencer marketing</p>
-                <a href="#" class="read-more">Read Full Story →</a>
+        <div class="marketing-strategies">
+            <div class="strategy">
+                <h3><span>01</span> Paid Advertising</h3>
+                <p>Precision-targeted campaigns on Meta, Google, TikTok and more that maximize ROAS.</p>
+                <ul>
+                    <li>Conversion-optimized ad creatives</li>
+                    <li>Advanced audience segmentation</li>
+                    <li>Automated bid strategies</li>
+                </ul>
+            </div>
+            <div class="strategy">
+                <h3><span>02</span> Email & SMS Marketing</h3>
+                <p>Automated sequences that turn one-time buyers into loyal customers.</p>
+                <ul>
+                    <li>Abandoned cart recovery</li>
+                    <li>Post-purchase nurture flows</li>
+                    <li>Segmented promotional campaigns</li>
+                </ul>
+            </div>
+            <div class="strategy">
+                <h3><span>03</span> Organic Growth</h3>
+                <p>Sustainable strategies that build long-term brand authority.</p>
+                <ul>
+                    <li>SEO-optimized content</li>
+                    <li>Social media community building</li>
+                    <li>Influencer partnerships</li>
+                </ul>
             </div>
         </div>
-        <div class="case-study">
-            <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1585386959984-a4155224a1ad')"></div>
-            <div class="case-content">
-                <h3>Home Goods Store</h3>
-                <p class="results">5X ROAS on ad spend</p>
-                <p>Strategic Facebook ad campaigns with optimized conversion funnels</p>
-                <a href="#" class="read-more">Read Full Story →</a>
+        <div class="results-showcase">
+            <div class="result-card">
+                <h4>3-5X</h4>
+                <p>Average ROAS increase for our clients</p>
+            </div>
+            <div class="result-card">
+                <h4>40%+</h4>
+                <p>Improvement in customer acquisition costs</p>
+            </div>
+            <div class="result-card">
+                <h4>2-3X</h4>
+                <p>Higher customer lifetime value</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
-
-
-
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="section-title">
+            <h2>Success Stories</h2>
+            <p>Real businesses, real results</p>
+        </div>
+        <div class="case-study-grid">
+            <div class="case-study">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1526947425960-945c6e72858f')"></div>
+                <div class="case-content">
+                    <h3>Fashion Boutique</h3>
+                    <p class="results">+320% revenue in 6 months</p>
+                    <p>Complete store redesign combined with targeted influencer marketing</p>
+                    <a href="#" class="read-more">Read Full Story →</a>
+                </div>
+            </div>
+            <div class="case-study">
+                <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1585386959984-a4155224a1ad')"></div>
+                <div class="case-content">
+                    <h3>Home Goods Store</h3>
+                    <p class="results">5X ROAS on ad spend</p>
+                    <p>Strategic Facebook ad campaigns with optimized conversion funnels</p>
+                    <a href="#" class="read-more">Read Full Story →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
@@ -1044,22 +1121,14 @@ s0.parentNode.insertBefore(s1,s0);
     </section>
 
     <!-- CTA Section -->
-    <!-- <section class="cta-section" id="cta">
-        <h2>Ready To Scale Your Ecommerce Business?</h2>
-        <p>Let's discuss how we can help you achieve explosive growth and dominate your market. Contact us today for a free strategy session.</p>
-        <a href="https://wa.me/447780697249" class="cta-button white">Chat On WhatsApp Now</a>
-    </section> -->
-    
-    
-    <!-- Updated CTA Section -->
-<section class="cta-section">
-    <h2>Ready To Transform Your Ecommerce Business?</h2>
-    <p>Whether you need a complete store makeover, development expertise, or growth marketing that delivers - we've got you covered.</p>
-    <div class="cta-buttons">
-        <a href="https://wa.me/447780697249" class="cta-button white"><i class="fab fa-whatsapp"></i> Chat Now</a>
-        <a href="#services" class="secondary-button">Explore Services</a>
-    </div>
-</section>
+    <section class="cta-section" id="cta">
+        <h2>Ready To Transform Your Ecommerce Business?</h2>
+        <p>Whether you need a complete store makeover, development expertise, or growth marketing that delivers - we've got you covered.</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/447780697249" class="cta-button white"><i class="fab fa-whatsapp"></i> Chat Now</a>
+            <a href="#services" class="secondary-button">Explore Services</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -1101,6 +1170,14 @@ s0.parentNode.insertBefore(s1,s0);
             hamburger.classList.toggle('active');
         });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav') && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1138,7 +1215,7 @@ s0.parentNode.insertBefore(s1,s0);
 
         // Animation on Scroll
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.service-card, .section-title');
+            const elements = document.querySelectorAll('.service-card, .section-title, .step, .strategy, .case-study');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -1152,7 +1229,7 @@ s0.parentNode.insertBefore(s1,s0);
         };
 
         // Set initial state for animated elements
-        document.querySelectorAll('.service-card, .section-title').forEach(element => {
+        document.querySelectorAll('.service-card, .section-title, .step, .strategy, .case-study').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(20px)';
             element.style.transition = 'all 0.6s ease';
@@ -1160,6 +1237,23 @@ s0.parentNode.insertBefore(s1,s0);
 
         window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
+
+        // Detect if device is in desktop mode (mobile with desktop user agent)
+        function isMobileDesktopMode() {
+            return window.innerWidth >= 992 && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        if (isMobileDesktopMode()) {
+            document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            document.body.classList.add('desktop-mode');
+        }
+
+        // Handle resize events
+        window.addEventListener('resize', () => {
+            if (isMobileDesktopMode()) {
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            }
+        });
     </script>
 </body>
 </html>
